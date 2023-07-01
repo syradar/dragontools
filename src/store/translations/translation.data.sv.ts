@@ -66,6 +66,13 @@ export const translationsSv: Translations = {
     CommunityTitle: 'Community',
     ThanksCommunity:
       'Tack till communityt för Drakar och Demoner för inspiration, hjälp och material jag kunnat använda.',
+    moreTools: {
+      title: 'Fler verktyg',
+      yxansKlagan: {
+        name: 'Yxans klagan',
+        description: 'Ett webbverktyg för spelledare av Svärdets sång.',
+      },
+    },
   },
   initiative: {
     drawNewInitiative: 'Dra nytt initiativ',
