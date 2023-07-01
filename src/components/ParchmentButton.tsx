@@ -12,6 +12,7 @@ export type ParchmentButtonProps = AriaButtonProps &
       | 'ghost'
       | 'ghost-secondary'
       | 'link'
+      | 'linkDanger'
       | 'sourceRavland'
       | 'sourceBitterReach'
     forwardedRef?: React.Ref<HTMLButtonElement>
@@ -20,15 +21,22 @@ export type ParchmentButtonProps = AriaButtonProps &
 
 export const ParchmentButton = (props: ParchmentButtonProps) => {
   const ref = useRef(null)
-  const { buttonProps } = useButton(props, ref)
-  const { children, buttonType = 'primary', small, isDisabled } = props
+  const { buttonProps, isPressed } = useButton(props, ref)
+  const {
+    children,
+    className,
+    buttonType = 'primary',
+    small,
+    isDisabled,
+  } = props
 
   return (
     <button
       ref={ref}
       {...buttonProps}
       className={`
-        group min-w-fit
+        group
+        min-w-fit
         ${isDisabled ? 'cursor-not-allowed' : 'cursor-pointer'}
         ${props.fullWidth ? 'w-full' : 'w-fit'}
         z-0
@@ -36,9 +44,10 @@ export const ParchmentButton = (props: ParchmentButtonProps) => {
           rounded-lg border transition-colors focus:outline-none
           focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2
           ${buttonType === 'link' ? '' : 'shadow'}
+
           ${
             isDisabled && buttonType !== 'ghost'
-              ? 'border-stone-500 bg-stone-500'
+              ? 'border-stone-200 bg-stone-200 text-stone-500'
               : ''
           }
           ${
@@ -58,6 +67,8 @@ export const ParchmentButton = (props: ParchmentButtonProps) => {
                   'ghost-secondary':
                     'border-stone-500 bg-transparent text-stone-500 hover:border-amber-900 hover:bg-amber-100',
                   link: 'border-transparent bg-transparent text-stone-500 hover:border-amber-900 ',
+                  linkDanger:
+                    'border-transparent bg-transparent shadow-none hover:border-rose-600 hover:bg-rose-600',
                   danger:
                     'border-rose-800 bg-rose-600 hover:border-rose-800 hover:bg-rose-800',
                   sourceRavland:
@@ -68,9 +79,10 @@ export const ParchmentButton = (props: ParchmentButtonProps) => {
               : ''
           }
           z-10 col-start-1 col-end-2 row-start-1 row-end-2
-          flex items-center gap-2 font-medium transition-colors
+          flex items-center gap-2 font-medium transition-all
         ${small ? 'px-3 py-1' : 'px-4 py-2'}
         ${isDisabled ? 'text-gray-600' : ''}
+        ${className ?? ''}
         ${
           !isDisabled &&
           {
@@ -81,8 +93,14 @@ export const ParchmentButton = (props: ParchmentButtonProps) => {
             sourceBitterReach: 'source-text text-sky-800 hover:text-white',
             ghost: 'text-amber-900',
             link: 'text-amber-900',
+            linkDanger: 'text-rose-600 hover:text-rose-50',
             'ghost-secondary': '',
           }[buttonType]
+        }
+        ${
+          isPressed && (buttonType === 'primary' || buttonType === 'secondary')
+            ? 'translate-y-[1px] shadow-none'
+            : ''
         }
         `}
     >
