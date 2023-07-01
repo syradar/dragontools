@@ -87,7 +87,7 @@ const AppMenu = () => {
               className="mb-4 mt-auto text-center text-emerald-600 hover:underline"
               href="https://github.com/syradar/dragontools/issues/new/choose"
             >
-              {t('core:GiveFeedback')}
+              {t('core:give_feedback')}
             </a>
           </div>
         </div>

@@ -41,7 +41,7 @@ const InitiativePage = () => {
     <div>
       <div className="mb-8 flex gap-2">
         <TextField
-          label={t('initiative:newPerson')}
+          label={t('initiative:person.new')}
           onChange={setNewPersonName}
           onEnter={handleAddPerson}
           value={newPersonName}
@@ -52,13 +52,13 @@ const InitiativePage = () => {
           onPress={() => handleAddPerson()}
           onKeyDown={(e) => console.log(`key down: ${e.key}`)}
         >
-          {t('initiative:addPerson')}
+          {t('initiative:person.add')}
         </ParchmentButton>
       </div>
 
       <div className="mb-4 flex flex-wrap justify-between gap-4">
         <Typography parchment variant="h2">
-          {t('initiative:combatants')}
+          {t('initiative:combatants.title')}
         </Typography>
         <div>
           <ParchmentButton
@@ -66,7 +66,7 @@ const InitiativePage = () => {
             isDisabled={combat.length === 0}
             onPress={() => dispatch(removeAll())}
           >
-            {t('initiative:removeAll')}
+            {t('initiative:combatants.remove_all')}
           </ParchmentButton>
         </div>
       </div>
@@ -84,7 +84,7 @@ const InitiativePage = () => {
     ${buttonEffect ? 'animate-[spin_500ms_ease-in-out_0.5]' : ''}
                 `}
           />
-          {t('initiative:drawNewInitiative')}
+          {t('initiative:draw_new')}
         </ParchmentButton>
       ) : null}
 
@@ -133,7 +133,7 @@ const InitiativeCardButton = (props: InitiativeCardProps) => {
           buttonType="linkDanger"
           onPress={() => dispatch(removePerson({ id: card.id }))}
         >
-          {t('initiative:removePerson')}
+          {t('initiative:person.remove')}
         </ParchmentButton>
       </div>
     </button>

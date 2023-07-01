@@ -10,30 +10,30 @@ const HomePage = () => {
 
   return (
     <div className="max-w-prose">
-      <PageHeader>{t('home:Page')}</PageHeader>
+      <PageHeader>{t('home:page')}</PageHeader>
 
-      <p className="yx-prose mb-8 text-lg">{t('home:Description')}</p>
+      <p className="yx-prose mb-8 text-lg">{t('home:description')}</p>
 
       <Typography variant="h2" parchment>
-        {t('home:GameTitle')}
+        {t('home:game_title')}
       </Typography>
 
       <p className="yx-prose mb-8 text-lg">
-        {t('home:ThanksTo')}{' '}
+        {t('home:thanks_to')}{' '}
         <a
           className="text-emerald-600 hover:underline"
           href="https://freeleaguepublishing.com/sv/"
         >
-          {t('home:FreeLeague')}
+          {t('home:free_league')}
         </a>{' '}
-        {t('home:ForAFantasticGame')}
+        {t('home:for_a_fantastic_game')}
       </p>
 
       <Typography variant="h2" parchment>
-        {t('home:CommunityTitle')}
+        {t('home:community.title')}
       </Typography>
 
-      <p className="yx-prose mb-4 text-lg">{t('home:ThanksCommunity')}</p>
+      <p className="yx-prose mb-4 text-lg">{t('home:community.thanks')}</p>
 
       {showCommunity ? (
         <div className="yx-prose flex flex-wrap gap-4 text-lg">
@@ -65,7 +65,7 @@ const HomePage = () => {
       ) : null}
 
       <Typography variant="h2" parchment>
-        {t('home:moreTools.title')}
+        {t('home:more_tools.title')}
       </Typography>
 
       <Typography variant="h3" parchment>
@@ -73,12 +73,12 @@ const HomePage = () => {
           className="text-emerald-600 hover:underline"
           href="https://yxans-klagan.vercel.app/"
         >
-          {t('home:moreTools.yxansKlagan.name')}
+          {t('home:more_tools.yxans_klagan.name')}
         </a>
       </Typography>
 
       <p className="yx-heading mb-4 text-lg">
-        {t('home:moreTools.yxansKlagan.description')}
+        {t('home:more_tools.yxans_klagan.description')}
       </p>
     </div>
   )

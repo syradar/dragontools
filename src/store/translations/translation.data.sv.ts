@@ -10,43 +10,43 @@ export const translationsSv: Translations = {
       home: 'Meny',
       initiative: 'Initiativ',
     },
-    GiveFeedback: 'Feedback',
+    give_feedback: 'Feedback',
   },
   common: {
-    Page: 'Sida',
-    GMBook: 'SL',
-    Empty: '',
-    Gender: {
-      Man: 'Man',
-      Men: 'Män',
-      Woman: 'Kvinna',
-      Women: 'Kvinnor',
+    page: 'Sida',
+    gm_book: 'SL',
+    empty: '',
+    gender: {
+      man: 'Man',
+      men: 'Män',
+      woman: 'Kvinna',
+      women: 'Kvinnor',
     },
-    Direction: {
-      North: 'norr',
-      NorthEast: 'nordöst',
-      East: 'öster',
-      SouthEast: 'sydöst',
-      South: 'söder',
-      SouthWest: 'sydväst',
-      West: 'väst',
-      NorthWest: 'nordväst',
+    direction: {
+      north: 'norr',
+      north_east: 'nordöst',
+      east: 'öster',
+      south_east: 'sydöst',
+      south: 'söder',
+      south_west: 'sydväst',
+      west: 'väst',
+      north_west: 'nordväst',
     },
-    Coin: {
-      Coin_one: 'mynt',
-      Coin_other: 'mynt',
-      Copper: 'koppar',
-      Silver: 'silver',
-      Gold: 'guld',
+    coin: {
+      coin_one: 'mynt',
+      coin_other: 'mynt',
+      copper: 'koppar',
+      silver: 'silver',
+      gold: 'guld',
       day: 'per dag',
     },
-    Weight: {
-      Weight: 'Vikt',
-      None: '–',
-      Tiny: 'Småsak',
-      Light: 'Lätt',
-      Normal: 'Normal',
-      Heavy: 'Tung',
+    weight: {
+      weight: 'Vikt',
+      none: '–',
+      tiny: 'Småsak',
+      light: 'Lätt',
+      normal: 'Normal',
+      heavy: 'Tung',
       '3': '3',
       '4': '4',
       '5': '5',
@@ -56,32 +56,38 @@ export const translationsSv: Translations = {
     },
   },
   home: {
-    Page: 'Dragontools',
-    Description:
-      'Dragontools är mitt sätt att ge tillbaka till communityt och av helt själviska anledningar ett sätt för mig att leka med ny webbteknik.',
-    GameTitle: 'Drakar och Demoner',
-    FreeLeague: 'Fria Ligan',
-    ThanksTo: 'Tack till',
-    ForAFantasticGame: 'för ett fantastiskt spel!',
-    CommunityTitle: 'Community',
-    ThanksCommunity:
-      'Tack till communityt för Drakar och Demoner för inspiration, hjälp och material jag kunnat använda.',
-    moreTools: {
+    page: 'DragonTools',
+    description:
+      'DragonTools är mitt sätt att ge tillbaka till communityt och av helt själviska anledningar ett sätt för mig att leka med ny webbteknik.',
+    game_title: 'Drakar och Demoner',
+    thanks_to: 'Tack till',
+    free_league: 'Fria Ligan',
+    for_a_fantastic_game: 'för ett fantastiskt spel!',
+    community: {
+      title: 'Community',
+      thanks:
+        'Tack till communityt för Drakar och Demoner för inspiration, hjälp och material jag kunnat använda.',
+    },
+    more_tools: {
       title: 'Fler verktyg',
-      yxansKlagan: {
+      yxans_klagan: {
         name: 'Yxans klagan',
         description: 'Ett webbverktyg för spelledare av Svärdets sång.',
       },
     },
   },
   initiative: {
-    drawNewInitiative: 'Dra nytt initiativ',
+    draw_new: 'Dra nytt initiativ',
     done: 'Klar',
-    addPerson: 'Lägg till',
-    newPerson: `Nya personens namn`,
-    removePerson: 'Ta bort',
-    removeAll: 'Ta alla',
-    combatants: 'Stridsdeltagare',
+    person: {
+      add: 'Lägg till',
+      new: 'Nya personens namn',
+      remove: 'Ta bort',
+    },
+    combatants: {
+      title: 'Stridsdeltagare',
+      remove_all: 'Ta alla',
+    },
   },
 }
 
