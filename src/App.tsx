@@ -58,8 +58,8 @@ const AppMenu = () => {
     <div className="flex flex-col gap-4 bg-stone-300 py-4 lg:min-h-screen lg:min-w-[14rem]">
       <div className="flex justify-between gap-2 bg-stone-300 px-2">
         <Link to="/" className="block" onClick={() => !isLg && close()}>
-          <div className="yx-heading text-xl tracking-wide text-stone-500 transition-colors hover:text-emerald-500">
-            DRAGONTOOLS
+          <div className="yx-heading text-xl font-bold text-stone-500 transition-colors hover:text-emerald-500">
+            DragonTools
           </div>
         </Link>
         {!isLg ? (

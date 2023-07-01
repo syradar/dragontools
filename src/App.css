@@ -1,5 +1,3 @@
-@import url('./assets/kirsty-font.css');
-
 .App {
   /* background-color: hsl(48, 100%, 97%); */
 }
@@ -96,11 +94,8 @@ main {
 }
 
 .yx-heading {
-  /* Kirsty */
-  font-family: kirsty, serif;
-  font-weight: 400;
+  font-family: 'brothers', sans-serif;
   font-style: normal;
-  font-display: swap;
 }
 
 #ravland-map .cls-1,
