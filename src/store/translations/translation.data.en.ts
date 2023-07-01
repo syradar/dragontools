@@ -64,6 +64,13 @@ export const translationsEn = {
     CommunityTitle: 'Community',
     ThanksCommunity:
       'Thanks to the Dragonbane community for inspiration, help and material that I could use.',
+    moreTools: {
+      title: 'More tools',
+      yxansKlagan: {
+        name: 'Yxans klagan',
+        description: 'A web tool for GMs of Forbidden Lands.',
+      },
+    },
   },
   initiative: {
     drawNewInitiative: 'Draw new initiative',

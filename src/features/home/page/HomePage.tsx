@@ -34,6 +34,7 @@ const HomePage = () => {
       </Typography>
 
       <p className="yx-prose mb-4 text-lg">{t('home:ThanksCommunity')}</p>
+
       {showCommunity ? (
         <div className="yx-prose flex flex-wrap gap-4 text-lg">
           <a
@@ -62,6 +63,23 @@ const HomePage = () => {
           </a>
         </div>
       ) : null}
+
+      <Typography variant="h2" parchment>
+        {t('home:moreTools.title')}
+      </Typography>
+
+      <Typography variant="h3" parchment>
+        <a
+          className="text-emerald-600 hover:underline"
+          href="https://yxans-klagan.vercel.app/"
+        >
+          {t('home:moreTools.yxansKlagan.name')}
+        </a>
+      </Typography>
+
+      <p className="yx-prose mb-4 text-lg">
+        {t('home:moreTools.yxansKlagan.description')}
+      </p>
     </div>
   )
 }
