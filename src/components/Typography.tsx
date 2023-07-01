@@ -72,7 +72,11 @@ export const Typography = ({
   return (
     <h2
       className={`text-4xl
-    ${parchment ? 'font-medium text-emerald-700' : 'font-medium'}
+    ${
+      parchment
+        ? 'yx-heading font-medium uppercase tracking-wide text-emerald-700'
+        : 'font-medium'
+    }
     ${useMargin ? 'mb-4' : ''}
     ${center ? 'text-center' : ''}
     `}

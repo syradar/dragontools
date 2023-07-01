@@ -1,18 +1,31 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { nanoid } from 'nanoid'
 import { RootState } from '../../store/store'
+import { range } from 'src/functions/array.functions'
+import { z } from 'zod'
+import { createStateStorage } from 'src/store/persist/state-storage'
 
-export type InitiativeCard = {
-  id: string
-  value: number
-  hasGone: boolean
-}
+export const combatantSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  initiative: z.number(),
+  hasGone: z.boolean(),
+})
 
-type InitiativeState = {
-  cards: InitiativeCard[]
-}
+export type Combatant = z.infer<typeof combatantSchema>
 
-const initiativeCards = () => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].slice()
+const initiativeStateSchema = z.object({
+  combat: z.array(combatantSchema),
+})
+
+type InitiativeState = z.infer<typeof initiativeStateSchema>
+
+const INITIATIVE_STATE_STORAGE_KEY = 'mapState'
+export const localStorageInitiativeState = createStateStorage<InitiativeState>({
+  key: INITIATIVE_STATE_STORAGE_KEY,
+  label: 'MAP',
+  schema: initiativeStateSchema,
+})
 
 function shuffle<T>(array: T[]): T[] {
   let currentIndex = array.length
@@ -34,28 +47,48 @@ function shuffle<T>(array: T[]): T[] {
   return array
 }
 
+const shuffledArray = (length: number) =>
+  shuffle(range(length).map((_, i) => i + 1))
+
 // Define the initial state using that type
 const initialInitiativeState: InitiativeState = {
-  cards: shuffle(initiativeCards()).map((value) => ({
-    id: nanoid(),
-    value,
-    hasGone: false,
-  })),
+  combat: [],
 }
 
 const initiativeSlice = createSlice({
   name: 'initiative',
-  initialState: initialInitiativeState,
+  initialState: localStorageInitiativeState
+    .load()
+    .unwrapOr(initialInitiativeState),
   reducers: {
-    drawNewInitiative(state, _action: PayloadAction) {
-      state.cards = shuffle(initiativeCards()).map((value) => ({
+    addPerson(state, action: PayloadAction<{ name: string }>) {
+      state.combat.push({
         id: nanoid(),
-        value,
+        name: action.payload.name,
+        initiative: 0,
+        hasGone: false,
+      })
+    },
+    removePerson(state, action: PayloadAction<{ id: string }>) {
+      state.combat = state.combat.filter(
+        (person) => person.id !== action.payload.id,
+      )
+    },
+    removeAll(state) {
+      state.combat = []
+    },
+    newCombat(state) {
+      const initiative = shuffledArray(state.combat.length)
+      state.combat = state.combat.map((person, i) => ({
+        ...person,
+        initiative: initiative[i],
         hasGone: false,
       }))
+      state.combat.sort((a, b) => b.initiative - a.initiative)
     },
+
     toggleHasGone(state, action: PayloadAction<{ id: string }>) {
-      const card = state.cards.find((card) => card.id === action.payload.id)
+      const card = state.combat.find((card) => card.id === action.payload.id)
       if (card) {
         card.hasGone = !card.hasGone
       }
@@ -65,6 +98,7 @@ const initiativeSlice = createSlice({
 
 export default initiativeSlice.reducer
 
-export const { drawNewInitiative, toggleHasGone } = initiativeSlice.actions
+export const { addPerson, newCombat, removeAll, removePerson, toggleHasGone } =
+  initiativeSlice.actions
 
 export const selectInitiative = (state: RootState) => state.initiative

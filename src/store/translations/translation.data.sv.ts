@@ -70,6 +70,11 @@ export const translationsSv: Translations = {
   initiative: {
     drawNewInitiative: 'Dra nytt initiativ',
     done: 'Klar',
+    addPerson: 'Lägg till',
+    newPerson: `Nya personens namn`,
+    removePerson: 'Ta bort',
+    removeAll: 'Ta alla',
+    combatants: 'Stridsdeltagare',
   },
 }
 

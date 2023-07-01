@@ -68,6 +68,11 @@ export const translationsEn = {
   initiative: {
     drawNewInitiative: 'Draw new initiative',
     done: 'Done',
+    addPerson: 'Add person',
+    newPerson: `New person's name`,
+    removePerson: 'Remove',
+    removeAll: 'Remove all',
+    combatants: 'Combatants',
   },
 }
 
