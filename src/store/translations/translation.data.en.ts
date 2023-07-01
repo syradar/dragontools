@@ -54,9 +54,9 @@ export const translationsEn = {
     },
   },
   home: {
-    Page: 'Dragontools',
+    Page: 'DragonTools',
     Description:
-      'Dragontools is my way of giving back to the community and a way for me to play with new web technology.',
+      'DragonTools is my way of giving back to the community and a way for me to play with new web technology.',
     GameTitle: 'Dragonbane',
     FreeLeague: 'Free League Publishing',
     ThanksTo: 'Thanks to',

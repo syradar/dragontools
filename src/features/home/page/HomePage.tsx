@@ -77,7 +77,7 @@ const HomePage = () => {
         </a>
       </Typography>
 
-      <p className="yx-prose mb-4 text-lg">
+      <p className="yx-heading mb-4 text-lg">
         {t('home:moreTools.yxansKlagan.description')}
       </p>
     </div>
