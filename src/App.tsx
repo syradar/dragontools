@@ -10,6 +10,7 @@ import {
   initTranslations,
   selectTranslateFunction,
 } from './store/translations/translation.slice'
+import { DragonToolsLogo } from './components/DragonToolsLogo'
 
 const App = () => {
   const routes = useRoutes(appRoutes)
@@ -57,8 +58,13 @@ const AppMenu = () => {
   return (
     <div className="flex flex-col gap-4 bg-stone-300 py-4 lg:min-h-screen lg:min-w-[14rem]">
       <div className="flex justify-between gap-2 bg-stone-300 px-2">
-        <Link to="/" className="block" onClick={() => !isLg && close()}>
-          <div className="yx-heading text-xl font-bold text-stone-500 transition-colors hover:text-emerald-500">
+        <Link
+          to="/"
+          className="group flex items-center gap-2"
+          onClick={() => !isLg && close()}
+        >
+          <DragonToolsLogo className="w-10 text-emerald-500 transition-colors group-hover:text-black" />
+          <div className="yx-heading text-xl font-bold  text-stone-500 transition-colors group-hover:text-emerald-500">
             DragonTools
           </div>
         </Link>
