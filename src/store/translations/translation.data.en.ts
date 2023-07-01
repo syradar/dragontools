@@ -8,43 +8,43 @@ export const translationsEn = {
       home: 'Menu',
       initiative: 'Initiative',
     },
-    GiveFeedback: 'Feedback',
+    give_feedback: 'Feedback',
   },
   common: {
-    Page: 'Page',
-    GMBook: 'GM',
-    Empty: '',
-    Gender: {
-      Man: 'Man',
-      Men: 'Men',
-      Woman: 'Woman',
-      Women: 'Women',
+    page: 'Page',
+    gm_book: 'GM',
+    empty: '',
+    gender: {
+      man: 'Man',
+      men: 'Men',
+      woman: 'Woman',
+      women: 'Women',
     },
-    Direction: {
-      North: 'north',
-      NorthEast: 'north east',
-      East: 'east',
-      SouthEast: 'south east',
-      South: 'south',
-      SouthWest: 'south west',
-      West: 'west',
-      NorthWest: 'north west',
+    direction: {
+      north: 'north',
+      north_east: 'north east',
+      east: 'east',
+      south_east: 'south east',
+      south: 'south',
+      south_west: 'south west',
+      west: 'west',
+      north_west: 'north west',
     },
-    Coin: {
-      Coin_one: 'Coin',
-      Coin_other: 'coins',
-      Copper: 'copper',
-      Silver: 'silver',
-      Gold: 'gold',
+    coin: {
+      coin_one: 'Coin',
+      coin_other: 'coins',
+      copper: 'copper',
+      silver: 'silver',
+      gold: 'gold',
       day: 'per day',
     },
-    Weight: {
-      Weight: 'Weight',
-      None: '–',
-      Tiny: 'Tiny',
-      Light: 'Light',
-      Normal: 'Normal',
-      Heavy: 'Heavy',
+    weight: {
+      weight: 'Weight',
+      none: '–',
+      tiny: 'Tiny',
+      light: 'Light',
+      normal: 'Normal',
+      heavy: 'Heavy',
       '3': '3',
       '4': '4',
       '5': '5',
@@ -54,32 +54,39 @@ export const translationsEn = {
     },
   },
   home: {
-    Page: 'DragonTools',
-    Description:
+    page: 'DragonTools',
+    description:
       'DragonTools is my way of giving back to the community and a way for me to play with new web technology.',
-    GameTitle: 'Dragonbane',
-    FreeLeague: 'Free League Publishing',
-    ThanksTo: 'Thanks to',
-    ForAFantasticGame: 'for a fantastic game!',
-    CommunityTitle: 'Community',
-    ThanksCommunity:
-      'Thanks to the Dragonbane community for inspiration, help and material that I could use.',
-    moreTools: {
+    game_title: 'Dragonbane',
+    thanks_to: 'Thanks to',
+    free_league: 'Free League Publishing',
+    for_a_fantastic_game: 'for a fantastic game!',
+    community: {
+      title: 'Community',
+      thanks:
+        'Thanks to the Dragonbane community for inspiration, help and material that I could use.',
+    },
+
+    more_tools: {
       title: 'More tools',
-      yxansKlagan: {
+      yxans_klagan: {
         name: 'Yxans klagan',
         description: 'A web tool for GMs of Forbidden Lands.',
       },
     },
   },
   initiative: {
-    drawNewInitiative: 'Draw new initiative',
+    draw_new: 'Draw new initiative',
     done: 'Done',
-    addPerson: 'Add person',
-    newPerson: `New person's name`,
-    removePerson: 'Remove',
-    removeAll: 'Remove all',
-    combatants: 'Combatants',
+    person: {
+      add: 'Add person',
+      new: `New person's name`,
+      remove: 'Remove',
+    },
+    combatants: {
+      title: 'Combatants',
+      remove_all: 'Remove all',
+    },
   },
 }
 
