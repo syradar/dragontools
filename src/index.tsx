@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom'
 import 'tailwindcss/tailwind.css'
 import App from './App'
 import './App.css'
-import { consoleLogo } from './console-logo'
 import { store } from './store/store'
 import { webVitals } from './vitals'
 
@@ -55,5 +54,3 @@ import('@vercel/analytics')
   .catch((err) => {
     console.error('[Analytics]', err)
   })
-
-consoleLogo()
