@@ -7,7 +7,7 @@ export const translationsSv: Translations = {
       swedish: 'Svenska',
     },
     menu: {
-      home: 'Hem',
+      home: 'Meny',
       initiative: 'Initiativ',
     },
     GiveFeedback: 'Feedback',

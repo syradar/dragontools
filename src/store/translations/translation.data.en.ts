@@ -5,7 +5,7 @@ export const translationsEn = {
       swedish: 'Svenska',
     },
     menu: {
-      home: 'Home',
+      home: 'Menu',
       initiative: 'Initiative',
     },
     GiveFeedback: 'Feedback',
